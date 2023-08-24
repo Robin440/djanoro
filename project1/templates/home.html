@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+
+<div class="container-fluid d-flex justify-content-center">
+    <div class="card" style="width: 18rem;">
+        <img src="{% static 'image/IMG_4943.jpeg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          
+            <p class="card-text"><h1>Welcome to {{session.username}}'s page</h1></p>
+            <p class="card-text">Experienced Python Developer with a proven track record of creating and implementing robust, high-performance software applications. Proficient in developing and maintaining backend systems, APIs, and databases using Python and related frameworks. Strong problem-solving skills and a passion for writing clean, maintainable code. Excellent teamwork and communication abilities, with a history of collaborating effectively with cross-functional teams to deliver projects on time. Dedicated to staying up-to-date with the latest industry trends and technologies to drive innovation and continuous improvement.</p>
+           
+        </div>
+      </div>
+</div>
+
+
+<table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+    
+    
+    </tbody>
+  </table>
+<br>
+<br>
+  <div class="container d-flex justify-content-center">
+    <a href="{% url 'logout' %}" class="btn btn-dark">Log out</a>
+  </div>
+{% endblock %}
